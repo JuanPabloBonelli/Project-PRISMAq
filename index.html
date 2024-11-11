@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>PRISMAq</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="icon" href="/image/Logo-final.png" sizes="16x16">
+    
+    <style>
+    body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+
+    body, html {
+      height: 100%;
+      line-height: 1.8;
+    }
+
+    /* Full height image header */
+    .bgimg-1 {
+      background-position: center top;
+      background-size: cover;
+      background-image: url("/image/ia-image.jpg");
+      min-height: 100%;            
+    }
+
+    .w3-bar .w3-button {
+      padding: 16px;
+    }
+
+    .w3-bar-item[href="#work"] {
+      display: none !important;
+    }
+
+    .w3-text-white {
+    text-shadow: 
+    2px 2px 4px rgba(0, 0, 0, 0.7),
+    -2px -2px 4px rgba(0, 0, 0, 0.7),
+    2px -2px 4px rgba(0, 0, 0, 0.7),
+    -2px 2px 4px rgba(0, 0, 0, 0.7);
+    }
+    .w3-display-middle {
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo negro translúcido */
+    padding: 10px 20px;
+    border-radius: 8px;
+    }
+
+    </style>
+  </head>
+<body>
+
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <div class="w3-bar w3-white w3-card" id="myNavbar">
+    <a href="#home" class="w3-bar-item w3-button w3-wide"><img src="/image/Logo-final.png" alt="Logo" style="height: 26px;"> PRISMAq</a>
+    <!-- Right-sided navbar links -->
+    <div class="w3-right w3-hide-small">
+      <a href="#about" class="w3-bar-item w3-button">ABOUT</a>
+      <a href="#team" class="w3-bar-item w3-button"><i class="fa fa-user"></i> TEAM</a>
+      <!-- <a href="#work" class="w3-bar-item w3-button"><i class="fa fa-th"></i> WORK</a> -->
+      <a href="#pricing" class="w3-bar-item w3-button"><i class="fa fa-handshake"></i> COLLABORATE</a>
+      <a href="#contact" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i> CONTACT</a>
+    </div>
+    <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+
+    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
+      <i class="fa fa-bars"></i>
+    </a>
+  </div>
+</div>
+
+<!-- Sidebar on small screens when clicking the menu icon -->
+<nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
+  <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close ×</a>
+  <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button">ABOUT</a>
+  <a href="#team" onclick="w3_close()" class="w3-bar-item w3-button">TEAM</a>
+  <a href="#work" onclick="w3_close()" class="w3-bar-item w3-button">WORK</a>
+  <a href="#pricing" onclick="w3_close()" class="w3-bar-item w3-button">COLLABORATE</a>
+  <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button">CONTACT</a>
+</nav>
+
+<!-- Header with full-height image -->
+<header class="bgimg-1 w3-display-container w3-grayscale-min" id="home">
+  <div class="w3-display-left w3-text-white" style="text-align: center; padding:48px">
+    <span class="w3-jumbo w3-hide-small">PRISMAq</span><br>
+    <span class="w3-xxlarge w3-hide-large w3-hide-medium"><strong>PRISMAq</strong></span><br>
+    <span class="w3-xlarge"><strong>Pan-American Research Initiative for the Study of Macroinvertebrates in Aquatic habitats.</strong><br>Just as a prism refracts light into its spectrum of colors, PRISMAq dissects the intricate diversity of freshwater macroinvertebrates.</span>
+  </div> 
+</header>
+
+<!-- About Section -->
+<div class="w3-container" style="padding:128px 10px" id="about">
+  <h3 class="w3-center">ABOUT PRISMAq</h3>
+  <p class="w3-center w3-medium">Freshwater wetlands, small ponds, and headwater streams contribute substantially to global biodiversity significantly contributing to people’s needs but are largely absent from existing syntheses of freshwater biodiversity. 
+  There is a need to better understand processes that influence biodiversity in these small waterbodies, as they have experienced widespread degradation and are exceptionally vulnerable to environmental change.
+  The PRISMAq project aims to combine numerous datasets collected by a diverse community of scientists located throughout North and South America to disentangle the major patterns (and drivers) of freshwater macroinvertebrate biodiversity using a multiscale approach.</p> 
+  <p class="w3-center w3-large">Key features of our project.</p>
+   <div class="w3-row-padding w3-center" style="margin-top:64px; display: flex; flex-wrap: wrap; justify-content: center;">
+      <div class="w3-col s12 m4" style="text-align: center; margin-bottom: 16px;">
+          <i class="fa fa-lightbulb w3-margin-bottom w3-jumbo"></i>
+          <p class="w3-large">Project Objective</p>
+          <p>Compile a comprehensive macroinvertebrate dataset incorporating different freshwater bodies from North and South America.</p>
+      </div>
+      <div class="w3-col s12 m4" style="text-align: center; margin-bottom: 16px;">
+          <i class="fa fa-heart w3-margin-bottom w3-jumbo"></i>
+          <p class="w3-large">Passion for Impact</p>
+          <p>Small freshwater habitats are impacted by environmental changes, but they remain underrepresented in large-scale biodiversity syntheses.</p>
+      </div>   
+      <div class="w3-col s12 m4" style="text-align: center; margin-bottom: 16px;">
+          <i class="fa fa-users w3-margin-bottom w3-jumbo"></i>
+          <p class="w3-large">Mission of Unity</p>
+          <p>Joining data and intercultural scientific experience, we seek to promove comprehensive freshwater management and biodiversity conservation plans.</p>      
+      </div>
+  </div>
+</div>
+
+<!-- Team Section -->
+<div class="w3-container w3-light-grey" style="padding:128px 16px" id="team">
+  <h3 class="w3-center">THE TEAM</h3>  
+  <div class="w3-row-padding w3-grayscale w3-center" style="display: flex; justify-content: center; flex-wrap: wrap; margin-top: 64px;">
+    
+    <!-- Team Member 1 -->
+    <div class="w3-col l3 m6 w3-margin-bottom" style="flex: 1 1 250px; max-width: 300px;">
+      <div class="w3-card">
+        <img src="/image/Luis.jpeg" alt="Luis" style="width:100%">
+        <div class="w3-container">
+          <h3>
+            <a href="https://scholar.google.com/citations?user=pGMufq0AAAAJ&hl=es" target="_blank">Luis Epele</a>
+          </h3>
+          <p class="w3-opacity">Coordinator</p>
+          <p>I love exploring remote areas, testing new questions, and enjoy collaborative working.</p>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Team Member 2 -->
+    <div class="w3-col l3 m6 w3-margin-bottom" style="flex: 1 1 250px; max-width: 300px;">
+      <div class="w3-card">
+        <img src="/image/Emilio.png" alt="Emilio" style="width:100%">
+        <div class="w3-container">
+          <h3>
+            <a href="https://scholar.google.com/citations?hl=es&user=qizP8_IAAAAJ" target="_blank">Emilio Williams Subiza</a>
+          </h3>          
+          <p class="w3-opacity">Coordinator</p>
+          <p>I am an ecologist passionate about understanding biodiversity and exploring ways to protect it.</p>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Team Member 3 -->
+    <div class="w3-col l3 m6 w3-margin-bottom" style="flex: 1 1 250px; max-width: 300px;">
+      <div class="w3-card">
+        <img src="/image/Juan.jpg" alt="Juan Pablo" style="width:100%">
+        <div class="w3-container">
+          <h3>Juan Pablo Bonelli</h3>
+          <p class="w3-opacity">Coordinator</p>
+          <p>I am passionate about nature and computer science, exploring the world around me.</p>
+        </div>
+      </div>
+    </div>
+
+   <!-- New Paragraph Section Below Team Members -->
+  <div style="width: 100%; display: flex; justify-content: center; margin-top: 32px;">
+    <p class="w3-center w3-large" style="max-width: 600px;">Our Extended Team also includes: <br>Dr. Kyle I. McLean; Dr. Sarah M. Laske; Dr. Blanca Ríos-Touma</p>
+  </div>
+    
+  </div>
+</div>
+
+<!-- Work Section Para cuando el proyecto comience -->
+<!-- <div class="w3-container" style="padding:128px 16px" id="work">
+  <h3 class="w3-center">OUR WORK</h3>
+  <p class="w3-center w3-large">What we've done for people</p>
+
+  <div class="w3-row-padding" style="margin-top:64px">
+    <div class="w3-col l3 m6">
+      <img src="https://www.w3schools.com/w3images/tech_mic.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="A microphone">
+    </div>
+    <div class="w3-col l3 m6">
+      <img src="https://www.w3schools.com/w3images/tech_phone.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="A phone">
+    </div>
+    <div class="w3-col l3 m6">
+      <img src="https://www.w3schools.com/w3images/tech_drone.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="A drone">
+    </div>
+    <div class="w3-col l3 m6">
+      <img src="https://www.w3schools.com/w3images/tech_sound.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Soundbox">
+    </div>
+  </div>
+
+  <div class="w3-row-padding w3-section">
+    <div class="w3-col l3 m6">
+      <img src="https://www.w3schools.com/w3images/tech_tablet.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="A tablet">
+    </div>
+    <div class="w3-col l3 m6">
+      <img src="https://www.w3schools.com/w3images/tech_camera.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="A camera">
+    </div>
+    <div class="w3-col l3 m6">
+      <img src="https://www.w3schools.com/w3images/tech_typewriter.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="A typewriter">
+    </div>
+    <div class="w3-col l3 m6">
+      <img src="https://www.w3schools.com/w3images/tech_tableturner.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="A tableturner">
+    </div>
+  </div>
+</div> -->
+
+<!-- Modal for full size images on click-->
+<div id="modal01" class="w3-modal w3-black" onclick="this.style.display='none'">
+  <span class="w3-button w3-xxlarge w3-black w3-padding-large w3-display-topright" title="Close Modal Image">×</span>
+  <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+    <img id="img01" class="w3-image">
+    <p id="caption" class="w3-opacity w3-large"></p>
+  </div>
+</div>
+
+<!-- Collaboration Section -->
+<div class="w3-container w3-center w3-white" style="padding:128px 16px" id="pricing">
+  <h3>COLLABORATE</h3>
+  <p class="w3-large">Collaboration is the key to unlocking potential and creating impact.</p>
+  <div>
+    <p style="text-align: center;">
+      To collaborate with us and qualify for co-authorship in at least one article, your data need to fulfill the following requirements:
+    </p>
+    <ol style="text-align: justify;">
+      <li>Minimum of 10 independent sites (not many sites within a stream or pond), only including first or second order streams, and/or groundwater-fed springs and/or ponds (lentic freshwater bodies with a maximum depth of 5 meters and areas smaller than 100ha).</li>
+      <li>Macroinvertebrates occurrence (presence/absence) or abundance (the latter will allow you to participate in more papers). Preferred at finer possible resolution (i.e., genus).</li>
+      <li>Site coordinates.</li>
+      <li>Hydrological information (e.g., typical range of hydropatterns, water sources).</li>
+      <li>Water chemistry data (if available).</li>  
+    </ol>
+    <p style="text-align: center;">
+      Note that our analyses will focus mainly on broad-scale biodiversity patterns and, therefore, participation won't restrict your ability to analyze diversity within your own dataset. You can still of course use your data for independent publications.
+      
+    </p>
+                    
+     
+  </div>  
+</div>
+
+<!-- Contact Section -->
+<div class="w3-container w3-light-grey" style="padding:128px 16px" id="contact">
+  <h3 class="w3-center">CONTACT</h3>
+  <p class="w3-center w3-large">Please contact us if you want to participate or need more information!</p>
+  <div style="margin-top:48px">
+    <p  style="display: flex; align-items: justify; justify-content: justify;"><i class="fa fa-map-marker fa-fw w3-xxlarge w3-margin-right"></i> Esquel, Patagonia, Argentina</p>   
+    <p style="display: flex; align-items: justify; justify-content: justify;">
+      <i class="fa fa-envelope fa-fw w3-xxlarge w3-margin-right"></i>
+      <span>
+        Dr. Luis Epele. Centro de Investigación Esquel de Montaña y Estepa Patagónica (CONICET-UNPSJB), Esquel, Argentina. <strong>luis.epele@fulbrightmail.org</strong> <br>
+        Dr. Emilio Williams-Subiza. Centro de Investigación Esquel de Montaña y Estepa Patagónica (CONICET-UNPSJB), Esquel, Argentina. <strong>ewilsub@gmail.com</strong> <br>
+        Park Ranger. Juan Pablo Bonelli. National University of Patagonia San Juan Bosco, Esquel, Argentina. <strong>juampibonelli@hotmail.com</strong>
+      </span>
+    </p>
+  </div>  
+     
+</div>
+
+<!-- Footer. This section contains an ad for W3Schools Spaces. You can leave it to support us. -->
+<footer class="w3-center w3-dark-grey w3-padding-64">
+  <a href="#home" class="w3-button w3-light-grey" style="border-radius: 8px;"><i class="fa fa-arrow-up w3-margin-right"></i>To the top</a>
+  <p class="w3-medium">Developed in collaboration with CIEMEP and the National University of Patagonia San Juan Bosco.</p> 
+</footer>
+ 
+<script>
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+
+
+// Toggle between showing and hiding the sidebar when clicking the menu icon
+var mySidebar = document.getElementById("mySidebar");
+
+function w3_open() {
+  if (mySidebar.style.display === 'block') {
+    mySidebar.style.display = 'none';
+  } else {
+    mySidebar.style.display = 'block';
+  }
+}
+
+// Close the sidebar with the close button
+function w3_close() {
+    mySidebar.style.display = "none";
+}
+</script>
+
+</body>
+</html>
