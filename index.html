@@ -8,74 +8,87 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <link rel="icon" href="image/Logo-final.png" sizes="16x16">
-    
+
     <style>
-    body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+      body,h1,h2,h3,h4,h5,h6 { font-family: "Raleway", sans-serif; }
+      body, html { height: 100%; line-height: 1.8; }
 
-    body, html {
-      height: 100%;
-      line-height: 1.8;
-    }
+      .bgimg-1 {
+        background-position: center top;
+        background-size: cover;
+        background-image: url("image/ia-image.jpg");
+        min-height: 100%;            
+      }
 
-    /* Full height image header */
-    .bgimg-1 {
-      background-position: center top;
-      background-size: cover;
-      background-image: url("image/ia-image.jpg");
-      min-height: 100%;            
-    }
+      .w3-bar .w3-button { padding: 16px; }
 
-    .w3-bar .w3-button {
-      padding: 16px;
-    }
+      /* Eliminar la regla que oculta el enlace WORK */
+      /* .w3-bar-item[href="#work"] { display: none !important; } */
 
-    .w3-bar-item[href="#work"] {
-      display: none !important;
-    }
+      .w3-text-white {
+        text-shadow: 
+        2px 2px 4px rgba(0, 0, 0, 0.7),
+        -2px -2px 4px rgba(0, 0, 0, 0.7),
+        2px -2px 4px rgba(0, 0, 0, 0.7),
+        -2px 2px 4px rgba(0, 0, 0, 0.7);
+      }
 
-    .w3-text-white {
-    text-shadow: 
-    2px 2px 4px rgba(0, 0, 0, 0.7),
-    -2px -2px 4px rgba(0, 0, 0, 0.7),
-    2px -2px 4px rgba(0, 0, 0, 0.7),
-    -2px 2px 4px rgba(0, 0, 0, 0.7);
-    }
-    .w3-display-middle {
-    background-color: rgba(0, 0, 0, 0.5); /* Fondo negro translúcido */
-    padding: 10px 20px;
-    border-radius: 8px;
-    }
-
+      .w3-display-middle {
+        background-color: rgba(0, 0, 0, 0.5);
+        padding: 10px 20px;
+        border-radius: 8px;
+      }
     </style>
   </head>
-<body>
+  <body>
 
-<!-- Navbar (sit on top) -->
-<div class="w3-top">
-  <div class="w3-bar w3-white w3-card" id="myNavbar">
-    <a href="#home" class="w3-bar-item w3-button w3-wide"><img src="image/Logo-final.png" alt="Logo" style="height: 26px;"> PRISMAq</a>
-    <!-- Right-sided navbar links -->
-    <div class="w3-right w3-hide-small">
-      <a href="#about" class="w3-bar-item w3-button">ABOUT</a>
-      <a href="#team" class="w3-bar-item w3-button"><i class="fa fa-user"></i> TEAM</a>
-      <!-- <a href="#work" class="w3-bar-item w3-button"><i class="fa fa-th"></i> WORK</a> -->
-      <a href="#pricing" class="w3-bar-item w3-button"><i class="fa fa-handshake"></i> COLLABORATE</a>
-      <a href="#contact" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i> CONTACT</a>
+    <!-- Navbar (sit on top) -->
+    <div class="w3-top">
+      <div class="w3-bar w3-white w3-card" id="myNavbar">
+        <a href="#home" class="w3-bar-item w3-button w3-wide"><img src="image/Logo-final.png" alt="Logo" style="height: 26px;"> PRISMAq</a>
+        <!-- Right-sided navbar links -->
+        <div class="w3-right w3-hide-small">
+          <a href="#about" class="w3-bar-item w3-button">ABOUT</a>
+          <a href="#team" class="w3-bar-item w3-button"><i class="fa fa-user"></i> TEAM</a>
+          <a href="#work" class="w3-bar-item w3-button"><i class="fa fa-th"></i> WORK</a> 
+          <a href="#pricing" class="w3-bar-item w3-button"><i class="fa fa-handshake"></i> COLLABORATE</a>
+          <a href="#contact" class="w3-bar-item w3-button"><i class="fa fa-envelope"></i> CONTACT</a>
+        </div>
+        <!-- Hide right-floated links on small screens and replace them with a menu icon -->
+        <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
+          <i class="fa fa-bars"></i>
+        </a>
+      </div>
     </div>
-    <!-- Hide right-floated links on small screens and replace them with a menu icon -->
 
-    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-right w3-hide-large w3-hide-medium" onclick="w3_open()">
-      <i class="fa fa-bars"></i>
-    </a>
-  </div>
-</div>
+    <!-- Sidebar -->
+    <nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" id="mySidebar" style="display:none">
+      <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close ×</a>
+      <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button">ABOUT</a>
+      <a href="#team" onclick="w3_close()" class="w3-bar-item w3-button">TEAM</a>
+      <a href="#work" onclick="w3_close()" class="w3-bar-item w3-button">WORK</a> <!-- This is the "UPDATES" link -->
+      <a href="#pricing" onclick="w3_close()" class="w3-bar-item w3-button">COLLABORATE</a>
+      <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button">CONTACT</a>
+    </nav>
+
+    <script>
+      // Open the sidebar when the menu icon is clicked
+      function w3_open() {
+        document.getElementById("mySidebar").style.display = "block";
+      }
+
+      // Close the sidebar
+      function w3_close() {
+        document.getElementById("mySidebar").style.display = "none";
+      }
+    </script>
 
 <!-- Sidebar on small screens when clicking the menu icon -->
 <nav class="w3-sidebar w3-bar-block w3-black w3-card w3-animate-left w3-hide-medium w3-hide-large" style="display:none" id="mySidebar">
   <a href="javascript:void(0)" onclick="w3_close()" class="w3-bar-item w3-button w3-large w3-padding-16">Close ×</a>
   <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button">ABOUT</a>
   <a href="#team" onclick="w3_close()" class="w3-bar-item w3-button">TEAM</a>
-  <a href="#work" onclick="w3_close()" class="w3-bar-item w3-button">WORK</a>
+  <a href="#work" onclick="w3_close()" class="w3-bar-item w3-button">UPDATES</a>
   <a href="#pricing" onclick="w3_close()" class="w3-bar-item w3-button">COLLABORATE</a>
   <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button">CONTACT</a>
 </nav>
@@ -169,52 +182,25 @@
 </div>
 
 <!-- Work Section Para cuando el proyecto comience -->
-<!-- <div class="w3-container" style="padding:128px 16px" id="work">
+<div class="w3-container" style="padding:128px 16px" id="work">
   <h3 class="w3-center">OUR WORK</h3>
-  <p class="w3-center w3-large">What we've done for people</p>
+  <p class="w3-center w3-large">Geographical distribution of the data collected in PRISMAq.</p>
 
-  <div class="w3-row-padding" style="margin-top:64px">
-    <div class="w3-col l3 m6">
-      <img src="https://www.w3schools.com/w3images/tech_mic.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="A microphone">
-    </div>
-    <div class="w3-col l3 m6">
-      <img src="https://www.w3schools.com/w3images/tech_phone.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="A phone">
-    </div>
-    <div class="w3-col l3 m6">
-      <img src="https://www.w3schools.com/w3images/tech_drone.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="A drone">
-    </div>
-    <div class="w3-col l3 m6">
-      <img src="https://www.w3schools.com/w3images/tech_sound.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="Soundbox">
-    </div>
-  </div>
-
-  <div class="w3-row-padding w3-section">
-    <div class="w3-col l3 m6">
-      <img src="https://www.w3schools.com/w3images/tech_tablet.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="A tablet">
-    </div>
-    <div class="w3-col l3 m6">
-      <img src="https://www.w3schools.com/w3images/tech_camera.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="A camera">
-    </div>
-    <div class="w3-col l3 m6">
-      <img src="https://www.w3schools.com/w3images/tech_typewriter.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="A typewriter">
-    </div>
-    <div class="w3-col l3 m6">
-      <img src="https://www.w3schools.com/w3images/tech_tableturner.jpg" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity" alt="A tableturner">
-    </div>
-  </div>
-</div> -->
-
-<!-- Modal for full size images on click-->
-<div id="modal01" class="w3-modal w3-black" onclick="this.style.display='none'">
-  <span class="w3-button w3-xxlarge w3-black w3-padding-large w3-display-topright" title="Close Modal Image">×</span>
-  <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
-    <img id="img01" class="w3-image">
-    <p id="caption" class="w3-opacity w3-large"></p>
+  <div class="w3-center">
+    <div style="padding: 20px; text-align: center;">
+      <img src="image/Coordenadas.png" style="width:100%; max-width:600px; border-radius: 10px; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);" alt="Sampling sites map">
+    </div>     
+    <p class="w3-padding w3-center" style="max-width: 800px; margin: auto;">
+      This map represents the continental coverage of the <strong>PRISMAq</strong> project, which integrates <strong>57 independent databases</strong>,
+      covering a total of <strong>4619 sampling sites</strong> and more than <strong>10,598 samples</strong> distributed across the Americas,
+      from Alaska to Tierra del Fuego. This unprecedented integration aims to understand large-scale ecological patterns in freshwater systems.
+    </p>
   </div>
 </div>
 
+
 <!-- Collaboration Section -->
-<div class="w3-container w3-center w3-white" style="padding:128px 16px" id="pricing">
+<div class="w3-container w3-center w3-light-grey" style="padding:128px 16px" id="pricing">
   <h3>COLLABORATE</h3>
   <p class="w3-large">Collaboration is the key to unlocking potential and creating impact.</p>
   <div>
@@ -238,7 +224,7 @@
 </div>
 
 <!-- Contact Section -->
-<div class="w3-container w3-light-grey" style="padding:128px 16px" id="contact">
+<div class="w3-container w3-white" style="padding:128px 16px" id="contact">
   <h3 class="w3-center">CONTACT</h3>
   <p class="w3-center w3-large">Please contact us if you want to participate or need more information!</p>
   <div style="margin-top:48px">
